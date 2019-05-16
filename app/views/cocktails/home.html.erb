@@ -1,2 +1,9 @@
-<h1>Cocktails#home</h1>
-<p>Find me in app/views/cocktails/home.html.erb</p>
+<div class="container mt-3">
+  <h1>All of our Cocktails</h1>
+  <ul>
+    <% @cocktails.each do |cocktail| %>
+    <li><%= link_to cocktail.name, cocktail %> | <%= link_to "Delete", cocktail_path(cocktail), method: :delete,
+      data: { confirm: "Are you sure?" } %></li>
+    <% end %>
+  </ul>
+</div>
