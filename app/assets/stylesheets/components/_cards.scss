@@ -1,0 +1,28 @@
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+
+.card-category {
+    padding: 10px;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(http://www.vicevertu.ca/assets/img/cocktail-eve-2.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    .card-content {
+      color:white;
+      font-size: 24px;
+    }
+    .link {
+      color: white !important;
+      font-size: 24px;
+    }
+    .link:hover {
+      text-decoration: none !important;
+    }
+  }

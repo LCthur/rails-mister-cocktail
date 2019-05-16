@@ -1,4 +1,13 @@
-<div class="container mt-3">
+<div class="container mt-3 col-6">
   <h1><%= @cocktail.name %></h1>
+  <ul>
+    <li>
+      <% @cocktail.doses.each do |dose|  %>
+        <%= dose.description%> of <%= dose.ingredient.name %>
+      <% end %>
+    </li>
+  </ul>
   <%= link_to "add ingredients", new_cocktail_dose_path(params[:id]) %>
+   <%= link_to "Delete", cocktail_path(@cocktail), method: :delete,
+          data: { confirm: "Are you sure?" } %>
 </div>
