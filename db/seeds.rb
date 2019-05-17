@@ -17,3 +17,5 @@ Ingredient.create!(name: 'Red bull')
 Ingredient.create!(name: 'Beer')
 Ingredient.create!(name: 'Martini')
 Ingredient.create!(name: 'Olives')
+
+
