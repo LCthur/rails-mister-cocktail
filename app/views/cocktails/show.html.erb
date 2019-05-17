@@ -1,13 +1,57 @@
-<div class="container mt-3 col-6">
-  <h1><%= @cocktail.name %></h1>
-  <ul>
-    <li>
-      <% @cocktail.doses.each do |dose|  %>
-        <%= dose.description%> of <%= dose.ingredient.name %>
-      <% end %>
-    </li>
-  </ul>
-  <%= link_to "add ingredients", new_cocktail_dose_path(params[:id]) %>
-   <%= link_to "Delete", cocktail_path(@cocktail), method: :delete,
-          data: { confirm: "Are you sure?" } %>
+<div class="map"></div>
+<div class="container margin-top-negative">
+  <div class="row">
+    <div class="col-8">
+      <div class="card m-3">
+        <div class="d-flex justify-content-between align-items-center">
+          <h1 class="p-3"><%= @cocktail.name %></h1>
+          <h3 class="p-3"><%= link_to "Delete", cocktail_path(@cocktail), method: :delete,
+            data: { confirm: "Are you sure?" }, class: "btn btn-primary"%>
+          </h3>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="card m-3">
+        <div class="flex-align">
+          <h3 class="p-3">Share It</h3>
+          <div class="flex">
+            <a class="social-link" href="#">
+              <i class="fab fa-facebook-square fa-2x m-2 p-2"></i>
+            </a>
+            <a class="social-link" href="#">
+              <i class="fab fa-twitter-square fa-2x m-2 p-2"></i>
+            </a>
+            <a class="social-link" href="#">
+              <i class="fab fa-pinterest-square fa-2x m-2 p-2"></i>
+            </a>
+            <a class="social-link" href="#">
+              <i class="fas fa-envelope-square fa-2x m-2 p-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-8">
+      <div class="card m-3">
+        <div class="d-flex justify-content-between">
+          <h2 class="p-3">Ingredients</h2>
+          <%= link_to "+", new_cocktail_dose_path(@cocktail), class: "m-3 add-new"  %>
+        </div>
+        <ul>
+          <% @cocktail.doses.each do |dose|  %>
+          <li class="p-3">
+              <%= dose.description%> of <%= dose.ingredient.name %>
+          </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>
+
+
+
+  <%= link_to "Home page", root_path %>
+
+

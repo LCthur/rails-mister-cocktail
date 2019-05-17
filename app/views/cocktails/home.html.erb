@@ -1,15 +1,18 @@
 <div class="banner">
   <div class="container text-center">
-    <h1><strong>Mister Cocktail</strong>!</h1>
+    <h1><strong>Mister Cocktail</strong></h1>
     <p>All the famous cocktails</p>
-    <a class="btn btn-primary" href="#">Discover now</a>
+    <a class="button" href="#cards">Discover</a>
   </div>
 </div>
 
-<div class="container mt-3 col-9">
-  <div class="cards">
+<div class="container my-3 col-9">
+  <div class="cards" id="cards">
+    <div class="shadow d-flex align-items-center justify-content-center">
+        <%= link_to "+", new_cocktail_path, class: "add-card"%>
+    </div>
     <% @cocktails.each do |cocktail| %>
-      <div class="card-category">
+      <div class="card-category shadow">
         <div class="card-content">
           <%= link_to cocktail.name, cocktail, class: "link" %>
         </div>

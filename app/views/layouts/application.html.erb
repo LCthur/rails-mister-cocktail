@@ -7,18 +7,13 @@
 
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <%= javascript_include_tag 'application' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-  <nav class="navbar navbar-dark bg-dark">
-    <%= link_to "Cocktails", root_path, class: "navbar-brand" %>
-    <div class="navbar-nav">
-      <%= link_to "Add Cocktail", new_cocktail_path, class: "nav-item nav-link" %>
-    </div>
-  </nav>
+    <%= render 'layouts/navbar' unless @disable_nav %>
     <%= yield %>
     <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
     <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->

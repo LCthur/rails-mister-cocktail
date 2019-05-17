@@ -2,18 +2,22 @@ class CocktailsController < ApplicationController
 
   def home
     @cocktails = Cocktail.all
+    @disable_nav = true
   end
 
   def show
     @cocktail = Cocktail.find(params[:id])
+    @disable_nav = false
   end
 
   def index
     @cocktails = Cocktail.all
+    @disable_nav = true
   end
 
   def new
     @cocktail = Cocktail.new
+    @disable_nav = true
   end
 
   def create

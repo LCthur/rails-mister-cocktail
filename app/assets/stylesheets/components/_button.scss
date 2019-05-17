@@ -1,0 +1,34 @@
+.button {
+  z-index: 1;
+  color: white;
+  padding: 0.5em 1em;
+  outline: none;
+  border: 1px solid white;
+  border-radius: 50px;
+  background-color: none;
+  opacity: .8
+}
+
+
+.button:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: white;
+}
+
+.social-link {
+  color: black;
+}
+
+.social-link:hover{
+    text-decoration: none;
+    color: black;
+  }
+
+.add-new {
+  font-size: 30px;
+}
+
+.add-new:hover{
+  text-decoration: none !important;
+}

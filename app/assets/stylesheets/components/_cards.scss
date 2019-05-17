@@ -8,7 +8,7 @@
 
 .card-category {
     padding: 10px;
-    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(http://www.vicevertu.ca/assets/img/cocktail-eve-2.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1542849187-5ec6ea5e6a27?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1647&q=80);
     background-size: cover;
     background-position: center;
     height: 300px;
@@ -21,8 +21,17 @@
     .link {
       color: white !important;
       font-size: 24px;
+      opacity: .7;
     }
     .link:hover {
       text-decoration: none !important;
     }
   }
+
+.add-card {
+  font-size: 50px;
+}
+
+.add-card:hover {
+  text-decoration: none;
+}
