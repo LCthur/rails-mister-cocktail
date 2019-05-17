@@ -5,6 +5,12 @@
   grid-gap: 16px;
 }
 
+@media(max-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 .card-category {
     padding: 10px;
